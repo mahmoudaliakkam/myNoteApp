@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.editor.EditorActivity">
+
+    <RelativeLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="@string/to_do"
+            android:inputType="textCapSentences"
+            />
+        <EditText
+            android:id="@+id/note"
+            android:layout_below="@+id/title"
+            android:minLines="6"
+            android:gravity="top|start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:hint="@string/enter_note"
+            android:inputType="textMultiLine"
+            />
+
+            <ImageView
+                android:layout_marginTop="25dp"
+                android:layout_below="@id/note"
+                android:id="@+id/image_here"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"/>
+            <Button
+                android:layout_marginTop="25dp"
+                android:text="Add Image"
+                android:layout_marginLeft="170dp"
+                android:textColor="@color/white"
+                android:id="@+id/add_image"
+                android:layout_below="@id/image_here"
+                android:gravity="center"
+                android:background="@color/pink"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+        <com.thebluealliance.spectrum.SpectrumPalette
+            android:id="@+id/palette"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/add_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:spectrum_colors="@array/demo_colors"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
